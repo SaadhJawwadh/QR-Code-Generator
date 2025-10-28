@@ -75,7 +75,7 @@ const App: React.FC = () => {
                 <div className="flex justify-center gap-4 mt-6">
                   <button
                     onClick={handleSave}
-                    className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md transition-colors"
+                    className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-full transition-colors"
                   >
                     <Save size={18} />
                     Save to Collection

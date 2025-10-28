@@ -1,3 +1,4 @@
+
 import React, { useRef, useCallback, useState } from 'react';
 import type { IQrCode } from '../types';
 import { QrCodeDisplay } from './QrCodeDisplay';
@@ -56,10 +57,10 @@ export const QrCodeCard: React.FC<QrCodeCardProps> = ({ qrCode, onDelete }) => {
             <span>Created: {new Date(qrCode.createdAt).toLocaleDateString()}</span>
         </div>
       </div>
-      <div className="p-2 bg-slate-700/50 flex justify-end gap-2">
+      <div className="p-2 bg-slate-700/50 flex justify-end items-center gap-2">
         <button
           onClick={handleDownload}
-          className="flex items-center gap-2 text-sm bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-3 rounded-md transition-colors"
+          className="w-9 h-9 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-colors"
           aria-label="Download QR Code"
         >
           <Download size={16} />
@@ -67,10 +68,10 @@ export const QrCodeCard: React.FC<QrCodeCardProps> = ({ qrCode, onDelete }) => {
         <button
           onClick={handleCopy}
           disabled={isCopied}
-          className={`flex items-center gap-2 text-sm font-semibold py-2 px-3 rounded-md transition-colors ${
+          className={`w-9 h-9 flex items-center justify-center rounded-full text-white transition-colors ${
             isCopied
-              ? 'bg-green-600 text-white cursor-default'
-              : 'bg-slate-600 hover:bg-slate-500 text-white'
+              ? 'bg-green-600 cursor-default'
+              : 'bg-slate-600 hover:bg-slate-500'
           }`}
           aria-label={isCopied ? 'Copied to clipboard' : 'Copy data to clipboard'}
         >
@@ -78,7 +79,7 @@ export const QrCodeCard: React.FC<QrCodeCardProps> = ({ qrCode, onDelete }) => {
         </button>
         <button
           onClick={() => onDelete(qrCode.id)}
-          className="flex items-center gap-2 text-sm bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-3 rounded-md transition-colors"
+          className="w-9 h-9 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 text-white transition-colors"
           aria-label="Delete QR Code"
         >
           <Trash2 size={16} />
