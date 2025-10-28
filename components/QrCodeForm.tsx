@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import type { QrCodeConfig } from '../types';
 import { Send, ImagePlus, X } from 'lucide-react';
@@ -128,7 +127,7 @@ export const QrCodeForm: React.FC<QrCodeFormProps> = ({ onGenerate }) => {
       
       <button
         type="submit"
-        className="w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-full transition-colors"
+        className="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-4 rounded-full transition-colors"
       >
         <Send size={18} />
         Generate QR Code
